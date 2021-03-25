@@ -1,1 +1,2 @@
-# sFuzz implementation and setup 
+# sFuzz 
+## Implementation and setup 
