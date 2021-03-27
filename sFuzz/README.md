@@ -5,7 +5,7 @@
 
 Pull Docker image:
 
-` docker pull sfuzz/ethfuzzer '
+` docker pull sfuzz/ethfuzzer `
 
 Run the container and map ` contracts/ ` folder to the container:
 
