@@ -12,6 +12,6 @@ To run the docker image:
 
 Evaluate a smart contract and run the Confuzzius fuzzer on it:
 
-` python3 fuzzer/main.py -s <**Location of Contract**> -c TokenSale --solc v0.4.26 --evm byzantium -t 10 `
+` python3 fuzzer/main.py -s <Location of Contract> -c TokenSale --solc v0.4.26 --evm byzantium -t 10 `
 
 Note: Location of smart contract should be within the docker container created. 
