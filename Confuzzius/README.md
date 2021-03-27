@@ -3,6 +3,7 @@
 
 ### Docker method 
 To pull the docker image: 
+
 ` docker pull christoftorres/confuzzius `
 
 To run the docker image:
