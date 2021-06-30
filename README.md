@@ -26,7 +26,7 @@
   docker run -i -t -v $(pwd)/Dataset:/root/Dataset  christoftorres/confuzzius
 ```
 
-Note: The process of Fuzzer installation will be done through docker build files and not docker images being pulled this way in the final version with all the process automated using a Docker file. All the Fuzzers will be setup properly using the scripts in final version and user will be asked which fuzzer is to be run on the dataset.
+Note: The process of Fuzzer installation will be done through docker build files and not docker images being pulled this way in the final version with all the process automated using scripts just like profuzzbench. All the Fuzzers will be setup properly using the scripts in final version and user will be asked which fuzzer is to be run on the dataset.
 
 ### Step 2. (Fuzzing the entire Dataset using scripts created)
 
