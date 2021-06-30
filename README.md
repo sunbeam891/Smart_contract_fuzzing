@@ -16,3 +16,7 @@
   git clone https://github.com/sunbeam891/Smart_contract_fuzzing.git 
   cd Smart_contract_fuzzing
 ```
+
+## Step 1. (Setting up the required Fuzzers) 
+
+## Confuzzius
