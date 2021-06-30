@@ -36,3 +36,5 @@ Note: The process of Fuzzer installation will be done through docker build files
   chmod +x Confuzzius_commands.sh
   ./Confuzzius_commands.sh
 ```
+
+Note: All this process will be automated with the final version allowing all this to be done by just telling the tool which fuzzer is to be used including an option to use all of them and which dataset is to be fuzzed
