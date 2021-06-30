@@ -10,6 +10,8 @@
 
 ### Installation and setup (Currently only Cofuzzius is runnable on the entire dataset) (Linux)
 
-##Step 0. (Cloning repository)
+## Step 0. (Cloning repository)
 
-
+` git clone https://github.com/sunbeam891/Smart_contract_fuzzing.git 
+  cd Smart_contract_fuzzing
+ `
