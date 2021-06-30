@@ -12,6 +12,6 @@
 
 ## Step 0. (Cloning repository)
 
-` git clone https://github.com/sunbeam891/Smart_contract_fuzzing.git 
+`` git clone https://github.com/sunbeam891/Smart_contract_fuzzing.git 
   cd Smart_contract_fuzzing
- `
+ ``
