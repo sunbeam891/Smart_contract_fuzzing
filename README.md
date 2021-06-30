@@ -8,7 +8,8 @@
 2. Linux/Ubuntu has been used for testing
 3. Docker image containes required solc and python versions.
 
-## Installation and setup (Currently only Cofuzzius is runnable on the entire dataset)
+### Installation and setup (Currently only Cofuzzius is runnable on the entire dataset) (Linux)
 
-Refer to the README files inside each fuzzer folder mentioned above for specific setup. 
+##Step 0. (Cloning repository)
+
 
