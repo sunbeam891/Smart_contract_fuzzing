@@ -31,8 +31,8 @@ Note: The process of Fuzzer installation will be done through docker build files
 ### Step 2. (Fuzzing the entire Dataset using scripts created)
 
 ```
-  cd dataset
-  python3 Command_create.py Confuzzius /root/dataset /root/
+  cd Dataset
+  python3 Command_create.py Confuzzius /root/Dataset /root/
   chmod +x Confuzzius_commands.sh
   ./Confuzzius_commands.sh
 ```
