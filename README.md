@@ -23,7 +23,7 @@
 
 ``` 
   sudo docker pull christoftorres/confuzzius
-  docker run -i -t -v $(pwd)/Major_dataset:/root/Dataset  christoftorres/confuzzius
+  docker run -i -t -v $(pwd)/Utils:/root/Utils  christoftorres/confuzzius
 ```
 
 Note: The process of Fuzzer installation will be done through docker build files and not docker images being pulled this way in the final version with all the process automated using scripts just like profuzzbench. All the Fuzzers will be setup properly using the scripts in final version and user will be asked which fuzzer is to be run on the dataset.
@@ -31,8 +31,8 @@ Note: The process of Fuzzer installation will be done through docker build files
 ### Step 2. (Fuzzing the entire Dataset using scripts created)
 
 ```
-  cd Dataset
-  python3 Command_create.py Confuzzius /root/Dataset /root/
+  cd Utils/Scripts
+  python3 Command_create.py Confuzzius /root/Utils/Major_dataset /root/
   chmod +x Confuzzius_commands.sh
   ./Confuzzius_commands.sh
 ```
