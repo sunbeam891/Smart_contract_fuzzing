@@ -22,7 +22,7 @@
 #### Confuzzius
 
 ``` 
-  docker pull christoftorres/confuzzius
+  sudo docker pull christoftorres/confuzzius
   docker run -i -t -v $(pwd)/Dataset:/root/Dataset  christoftorres/confuzzius
 ```
 
