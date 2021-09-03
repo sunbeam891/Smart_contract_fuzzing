@@ -15,29 +15,33 @@
 ``` 
   git clone https://github.com/sunbeam891/Smart_contract_fuzzing.git 
   cd Smart_contract_fuzzing
+  export PFBENCH=$(pwd)
 ```
 
 ### Step 1. (Setting up the required Fuzzers) 
 
-#### Confuzzius
+#### Requirements and pulling of Docker images
 
 ``` 
-  sudo docker pull christoftorres/confuzzius
-  docker run -i -t -v $(pwd)/Utils:/root/Utils  christoftorres/confuzzius
+  cd Scripts_main
+  chmod +x Build_all.sh
+  ./Build_all.sh
 ```
 
-Note: The process of Fuzzer installation will be done through docker build files and not docker images being pulled this way in the final version with all the process automated using scripts just like profuzzbench. All the Fuzzers will be setup properly using the scripts in final version and user will be asked which fuzzer is to be run on the dataset.
 
-### Step 2. (Fuzzing the entire Dataset using scripts created)
+### Step 2. (Fuzzing contracts in the dataset)
 
 ```
-  cd Utils/Scripts
-  python3 Command_create.py Confuzzius /root/Utils/Major_dataset /root/
-  chmod +x Confuzzius_commands.sh
-  ./Confuzzius_commands.sh
+cd Scripts_main
+./exec_file.sh $PFBENCH Confuzzius 3  
 ```
 
-Note: All this process will be automated with the final version allowing all this to be done by just telling the tool which fuzzer is to be used including an option to use all of them and which dataset is to be fuzzed
+
+```
+NOTE : exec_file.sh is the main script that governs how many fuzzers are run at a time and what the target dataset is. 
+Format of exec_file.sh -> ./exec_file.sh <Folde having target dataset> <Fuzzer to be run (Confuzzius)(ILF)(sFuzz)(all)> <No. of times each fuzzer should be run parallely>
+
+```
 
 If permission error occurs because the repository is private, Please use following command after entering the git local repository of this project:
 
