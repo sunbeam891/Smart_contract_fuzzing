@@ -37,11 +37,16 @@ cd Scripts_main
 ```
 
 
-```
-NOTE : exec_file.sh is the main script that governs how many fuzzers are run at a time and what the target dataset is. 
-Format of exec_file.sh -> ./exec_file.sh <Folde having target dataset> <Fuzzer to be run (Confuzzius)(ILF)(sFuzz)(all)> <No. of times each fuzzer should be run parallely>
 
-```
+#### NOTE : exec_file.sh is the main script that governs how many fuzzers are run at a time and what the target dataset is. 
+
+Format of exec_file.sh -> ./exec_file.sh <Folder having target dataset> <Fuzzer to be run (Confuzzius)(ILF)(sFuzz)(all)> <No. of times each fuzzer should be run parallely>
+
+### arguments of exec_file.sh
+  1. Argument 1 -> Path of folder having target dataset
+  2. Argument 2 -> Name of Fuzzer to be run. Either All can be selected to run all fuzzers or 1 fuzzer's name
+  3. Argument 3 -> No. of times each fuzzer should be run
+
 
 If permission error occurs because the repository is private, Please use following command after entering the git local repository of this project:
 
