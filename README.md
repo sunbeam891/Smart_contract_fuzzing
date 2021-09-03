@@ -42,7 +42,7 @@ cd Scripts_main
 
 Format of exec_file.sh -> ./exec_file.sh <Folder having target dataset> <Fuzzer to be run (Confuzzius)(ILF)(sFuzz)(all)> <No. of times each fuzzer should be run parallely>
 
-### arguments of exec_file.sh
+### Arguments of exec_file.sh
   1. Argument 1 -> Path of folder having target dataset
   2. Argument 2 -> Name of Fuzzer to be run. Either All can be selected to run all fuzzers or 1 fuzzer's name
   3. Argument 3 -> No. of times each fuzzer should be run
