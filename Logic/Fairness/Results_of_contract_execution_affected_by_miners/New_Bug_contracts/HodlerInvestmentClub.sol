@@ -2,7 +2,7 @@
  *Submitted for verification at Etherscan.io on 2017-12-25
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 /**
  * Holds funds for a year.  Send to or deposit directly to this contract.
  * Each new acccount is initialized with a 1 year hold period, and is only 

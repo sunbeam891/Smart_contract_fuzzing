@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 //I will send 1 ether to each of my business partners.
 

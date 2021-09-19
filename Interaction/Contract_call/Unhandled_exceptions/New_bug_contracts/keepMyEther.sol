@@ -4,7 +4,7 @@
  * @vulnerable_at_lines: 25
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /*
 !!! THIS CONTRACT IS EXPLOITABLE AND FOR EDUCATIONAL PURPOSES ONLY !!!

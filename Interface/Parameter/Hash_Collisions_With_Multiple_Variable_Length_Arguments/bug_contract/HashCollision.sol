@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 //based https://swcregistry.io/docs/SWC-133#access-controlsol
 

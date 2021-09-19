@@ -5,7 +5,7 @@
  *  Author: Justas Kregždė
  */
  
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract token {
     function transferFrom(address sender, address receiver, uint amount) returns(bool success) {}

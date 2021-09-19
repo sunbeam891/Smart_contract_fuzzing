@@ -6,7 +6,7 @@
  * Copyright 2017 Icofunding S.L. (https://icofunding.com)
  * 
  */
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 /**
  * Math operations with safety checks
  * Reference: https://github.com/OpenZeppelin/zeppelin-solidity/commit/353285e5d96477b4abb86f7cde9187e84ed251ac

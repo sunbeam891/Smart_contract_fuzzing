@@ -2,7 +2,7 @@
  * @source: ChainSecurity
  * @author: Anton Permenev
  */
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract RuntimeUserInputCall{
 

@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 // testing
 contract HelpMeSave { 
    //wallet that forces me to save, until i have reached my goal

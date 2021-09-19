@@ -4,7 +4,7 @@
  * @vulnerable_at_lines: 21
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract Centra4 {
 

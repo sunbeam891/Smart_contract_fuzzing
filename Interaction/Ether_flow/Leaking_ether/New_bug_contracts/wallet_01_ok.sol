@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /* User can add pay in and withdraw Ether.
    Nobody can withdraw more Ether than they paid in.

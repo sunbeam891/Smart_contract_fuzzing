@@ -5,7 +5,7 @@
  *  Draglet GbmH
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 library SafeMath {
   function mul(uint256 a, uint256 b) pure internal returns (uint256) {

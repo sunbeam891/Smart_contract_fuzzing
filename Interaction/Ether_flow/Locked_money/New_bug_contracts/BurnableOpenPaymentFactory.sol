@@ -9,7 +9,7 @@
 
 //The payer can at any time choose to burn or release to the recipient any amount of funds.
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract BurnableOpenPayment {
     address public payer;

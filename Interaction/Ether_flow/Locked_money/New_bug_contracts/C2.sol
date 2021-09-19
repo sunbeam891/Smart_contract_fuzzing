@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 contract C1 {
     uint x;
     function C1(uint y) payable {

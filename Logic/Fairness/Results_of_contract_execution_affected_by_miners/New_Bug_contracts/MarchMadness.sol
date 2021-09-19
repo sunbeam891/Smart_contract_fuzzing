@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /// @title Oracle contract where m of n predetermined voters determine a value
 contract FederatedOracleBytes8 {

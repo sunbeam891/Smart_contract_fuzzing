@@ -2,7 +2,7 @@
  *Submitted for verification at Etherscan.io on 2018-02-28
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 /*https://hashnode.com/post/how-to-build-your-own-ethereum-based-erc20-token-and-launch-an-ico-in-next-20-minutes-cjbcpwzec01c93awtbij90uzn*/
 contract Token {
     event Transfer(address indexed _from, address indexed _to, uint256 _value);

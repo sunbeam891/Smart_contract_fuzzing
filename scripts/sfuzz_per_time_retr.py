@@ -1,4 +1,4 @@
-#Script_sFuzz_data_retriever_v0.13
+#Script_sFuzz_data_retriever_v0.14
 #format = python3 sfuzz_per_time_retr.py <filename> <contractname> <contracts_folder>
 import json
 import os
@@ -44,31 +44,31 @@ for final_file in Sorted_list:
     for key,value in vulnerabilities.items():
         if value != "0":
             if key == "gasless send":
-                cov_per_time.Vulnerabilities_detected.append("gasless")
+                cov_per_time.vulndetected.append("gasless")
                 time_trigger.vulnerabilities.append("gasless")
             elif key == "dangerous delegatecall":
-                cov_per_time.Vulnerabilities_detected.append("DangerousDelegatecall")
+                cov_per_time.vulndetected.append("DangerousDelegatecall")
                 time_trigger.vulnerabilities.append("DangerousDelegatecall")
             elif key == "exception disorder":
-                cov_per_time.Vulnerabilities_detected.append("UnhandledException")
+                cov_per_time.vulndetected.append("UnhandledException")
                 time_trigger.vulnerabilities.append("UnhandledException")
             elif key == "freezing ether":
-                cov_per_time.Vulnerabilities_detected.append("Locking")
+                cov_per_time.vulndetected.append("Locking")
                 time_trigger.vulnerabilities.append("Locking")
             elif key == "reentrancy":
-                cov_per_time.Vulnerabilities_detected.append("Reentrancy")
+                cov_per_time.vulndetected.append("Reentrancy")
                 time_trigger.vulnerabilities.append("Reentrancy")
             elif key == "integer overflow":
-                cov_per_time.Vulnerabilities_detected.append("Overflow")
+                cov_per_time.vulndetected.append("Overflow")
                 time_trigger.vulnerabilities.append("Overflow")
             elif key == "timestamp dependency":
-                cov_per_time.Vulnerabilities_detected.append("BlockStateDep")
+                cov_per_time.vulndetected.append("BlockStateDep")
                 time_trigger.vulnerabilities.append("BlockStateDep")
             elif key == "integer underflow":
-                cov_per_time.Vulnerabilities_detected.append("Overflow") 
+                cov_per_time.vulndetected.append("Overflow") 
                 time_trigger.vulnerabilities.append("Overflow")
             elif key == "block number dependency":
-                cov_per_time.Vulnerabilities_detected.append("BlockStateDep")
+                cov_per_time.vulndetected.append("BlockStateDep")
                 time_trigger.vulnerabilities.append("BlockStateDep")
     cov_per_time.Branchcov = Branch_coverage
     time_trigger.Branchcov = Branch_coverage
@@ -78,3 +78,5 @@ for final_file in Sorted_list:
     cov_per_time.branches= branches
     cov_per_time.cov_time_json_maker()
     time_trigger.trigger_json_maker()
+cov_per_time.file_creator()
+time_trigger.file_creator()    

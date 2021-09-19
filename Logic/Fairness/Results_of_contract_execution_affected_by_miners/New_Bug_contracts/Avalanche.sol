@@ -2,7 +2,7 @@
  *Submitted for verification at Etherscan.io on 2017-12-26
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract ERC20
 {

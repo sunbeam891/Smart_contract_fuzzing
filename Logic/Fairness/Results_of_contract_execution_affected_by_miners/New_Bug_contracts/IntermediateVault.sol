@@ -7,7 +7,7 @@
  * The owning party can reset the timer.
  *
  */
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 contract IntermediateVault  {
 
   /** Interface flag to determine if address is for a real contract or not */

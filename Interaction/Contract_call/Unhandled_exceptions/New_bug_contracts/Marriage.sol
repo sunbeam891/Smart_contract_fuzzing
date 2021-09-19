@@ -4,7 +4,7 @@
  * @vulnerable_at_lines: 55
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /// @author Jordi Baylina
 /// Auditors: Griff Green & psdev

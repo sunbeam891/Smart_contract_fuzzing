@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 /*Copyright @ Allstarbit*/
 contract TransferCoin {
     mapping (address => uint256) public balanceOf;

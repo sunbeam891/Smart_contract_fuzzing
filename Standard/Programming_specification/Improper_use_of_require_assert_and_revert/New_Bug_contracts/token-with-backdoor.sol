@@ -6,7 +6,7 @@
  * - backdoor()
  * - test_invariants()
  */
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract Token{
 

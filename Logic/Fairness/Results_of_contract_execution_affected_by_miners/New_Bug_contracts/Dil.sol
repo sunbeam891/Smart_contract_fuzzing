@@ -1,6 +1,6 @@
 // दिल तो पागल है
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract Token {
     /* This is a slight change to the ERC20 base standard.

@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
   
  // ----------------------------------------------------------------------------------------------
  // Special coin of Midnighters Club Facebook community

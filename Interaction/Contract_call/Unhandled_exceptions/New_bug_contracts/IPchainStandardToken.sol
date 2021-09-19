@@ -1,6 +1,6 @@
 // Abstract contract for the full ERC 20 Token standard
 // https://github.com/ethereum/EIPs/issues/20
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract Token {
     uint256 public totalSupply;

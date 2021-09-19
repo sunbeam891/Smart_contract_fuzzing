@@ -31,7 +31,7 @@
 //    Payer and Worker can still log statements.
 //    If addFunds() is called, the contract returns to the Committed state.
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract BurnablePaymentFactory {
     

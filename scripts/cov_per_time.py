@@ -1,4 +1,4 @@
-#Script_json_cov_per_time = v0.2
+#Script_json_cov_per_time = v0.3 costumized to not add to file at each append
 import json
 import os
 codecov="-"
@@ -10,15 +10,14 @@ File_path= "cov_per_time.json"
 Diction = {}
 Diction["stats"]={}
 branches = "-"
+Main_file_data = []
 def cov_time_json_maker():
-    if not os.path.exists(File_path):
-        # Create file with JSON enclosures
-        with open(File_path, 'w') as f:
-            json.dump([], f)
+    global Main_file_data
     Dict={}
     Dict=dict({"Code_Coverage":codecov,"Branch_Coverage":Branchcov,"No._of_Transactions":Transactions, "Time_Taken": timetaken,"vulnerabilities":vulndetected,"branches":branches})
-    with open(File_path, 'r+', encoding="utf-8") as file:
-        file_data = json.load(file)
-        file_data.append(Dict)
+    Main_file_data.append(Dict)
+
+def file_creator():
+    global Main_file_data
     with open(File_path, 'w') as f:
-        json.dump(file_data, f, indent=3)
+        json.dump(Main_file_data, f, indent=3)

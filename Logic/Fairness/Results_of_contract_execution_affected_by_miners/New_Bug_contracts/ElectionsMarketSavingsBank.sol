@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /*    Copyright © 2018  -  All Rights Reserved
  Use the first fully autonomous, profitable for depositors, based on smart contract, 

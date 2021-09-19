@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract IntegerOverflowBenign1 {
     uint public count = 1;

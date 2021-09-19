@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 library Strings {
     function concat(string _base, string _value) internal pure returns (string) {
         bytes memory _baseBytes = bytes(_base);

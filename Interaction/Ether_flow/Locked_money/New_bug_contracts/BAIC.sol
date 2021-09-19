@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /*
 You should inherit from TokenBase. This implements ONLY the standard functions obeys ERC20,

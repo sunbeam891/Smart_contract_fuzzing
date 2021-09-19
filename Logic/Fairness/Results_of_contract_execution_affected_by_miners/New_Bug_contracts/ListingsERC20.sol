@@ -2,7 +2,7 @@
  *Submitted for verification at Etherscan.io on 2018-02-21
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 
 /**
@@ -46,7 +46,7 @@ contract Ownable {
   }
 
 }
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 
 /**

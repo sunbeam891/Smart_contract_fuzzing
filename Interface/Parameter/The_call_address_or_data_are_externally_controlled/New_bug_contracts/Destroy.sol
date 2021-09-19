@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract Destroy{
       function delegatecall_selfdestruct(address _target) external returns (bool _ans) {

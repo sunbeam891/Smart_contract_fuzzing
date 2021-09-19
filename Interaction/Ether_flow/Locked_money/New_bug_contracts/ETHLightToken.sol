@@ -2,7 +2,7 @@
 Implements RAM-TOKEN-DEVELOPER 2018
 .*/
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract ERC20Interface {
     uint256 public totalSupply;

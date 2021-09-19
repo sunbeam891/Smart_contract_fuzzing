@@ -2,7 +2,7 @@
  *Submitted for verification at Etherscan.io on 2018-03-08
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 library SafeMath {
   function mul(uint256 a, uint256 b) internal constant returns (uint256) {

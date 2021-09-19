@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 // ## Matthew - a contract for increasing "whaleth"
 // README: https://github.com/rolandkofler/matthew

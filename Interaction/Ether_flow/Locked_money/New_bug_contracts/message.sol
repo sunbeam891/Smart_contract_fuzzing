@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 contract message {
     string public message;
     // int public num = 129;

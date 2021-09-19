@@ -4,7 +4,7 @@
 // back up admin contract for yunbi, adds owner in case of lockout
 
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 contract AdminInterface
 {
     address public Owner; // web3.eth.accounts[9]

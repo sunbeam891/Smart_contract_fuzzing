@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 // One Token to rule them all, One Token to find them, One Token to bring them all and in the darkness bind them
 contract TheOneToken {

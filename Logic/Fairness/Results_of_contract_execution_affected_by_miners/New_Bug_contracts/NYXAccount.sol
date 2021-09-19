@@ -1,7 +1,7 @@
 /*
 * Copyright © 2017 NYX. All rights reserved.
 */
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract NYXAccount {	
     /// This will allow you to transfer money to Emergency account

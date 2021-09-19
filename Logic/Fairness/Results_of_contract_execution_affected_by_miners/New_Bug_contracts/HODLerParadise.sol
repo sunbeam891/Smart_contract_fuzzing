@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 //
 // Welcome to the next level of Ethereum games: Are you weak-handed,  or a brave HODLer?

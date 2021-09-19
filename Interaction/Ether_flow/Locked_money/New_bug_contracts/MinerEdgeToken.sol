@@ -3,7 +3,7 @@ Implements MinerEdgetoken 2018
 .*/
 
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 
 contract MET20Interface {

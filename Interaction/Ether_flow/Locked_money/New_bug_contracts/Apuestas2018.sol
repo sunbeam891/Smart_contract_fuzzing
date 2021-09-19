@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /**
  * Contrato inteligente donde crearemos un tipo apuesta de equipos

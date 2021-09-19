@@ -5,7 +5,7 @@
 /// @param C is used for all return values
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract SimpleMathTest003 {
     

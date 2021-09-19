@@ -4,7 +4,7 @@
 
 // CryptoDuels.co Copyright (c) 2018. All rights reserved.
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 library SafeMath {
     function add(uint x, uint y) internal pure returns (uint z) {

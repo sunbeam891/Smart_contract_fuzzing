@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 /*
  * This is a distributed lottery that chooses random addresses as lucky addresses. If these
  * participate, they get the jackpot: the whole balance of the contract, including the ticket

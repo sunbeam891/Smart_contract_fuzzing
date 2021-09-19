@@ -3,7 +3,7 @@
 */
 
 /* Copyright (C) Etherplay <contact@etherplay.io> - All Rights Reserved */
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract CompetitionStore {
 	

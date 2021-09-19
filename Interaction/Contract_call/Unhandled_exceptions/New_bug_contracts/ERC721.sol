@@ -4,7 +4,7 @@
  * @vulnerable_at_lines: 1152,1496,2467
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 
 contract ERC20 {

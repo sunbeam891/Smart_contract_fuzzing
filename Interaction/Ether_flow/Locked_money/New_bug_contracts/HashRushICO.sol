@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 /**
 * Audited by VZ Chains (vzchains.com)
 * HashRushICO.sol creates the client's token for crowdsale and allows for subsequent token sales and minting of tokens

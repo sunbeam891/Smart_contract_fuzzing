@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 
 // D.H.A.R.M.A. Initiative Swan Protocol

@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 //deployed on Ropsten at: 0xd29d27cfacf7b77a16edac7c2cddf07dc4a603b8 
 //.8 Ether stored under transNonce 1

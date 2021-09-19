@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 //If you give me 1 ether, you can take 0.1 ether from everyone
 //This contract seems illegal

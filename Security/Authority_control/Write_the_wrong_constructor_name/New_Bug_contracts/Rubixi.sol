@@ -1,5 +1,5 @@
 // 0xe82719202e5965Cf5D9B6673B7503a3b92DE20be#code
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract Rubixi {
 

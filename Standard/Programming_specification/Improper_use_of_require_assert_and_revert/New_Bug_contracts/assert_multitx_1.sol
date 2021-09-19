@@ -3,7 +3,7 @@
  * @author: Suhabe Bugrara
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract AssertMultiTx1 {
     uint256 private param;

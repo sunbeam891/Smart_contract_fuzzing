@@ -1,7 +1,7 @@
 //! By Parity Technologies, 2017.
 //! Released under the Apache Licence 2.
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 // ECR20 standard token interface
 contract Token {

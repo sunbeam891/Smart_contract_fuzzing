@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 contract Constants {
 	uint256 public constant PRE_ICO_RISK_PERCENTAGE = 5;
 	uint256 public constant TEAM_SHARE_PERCENTAGE = 16;

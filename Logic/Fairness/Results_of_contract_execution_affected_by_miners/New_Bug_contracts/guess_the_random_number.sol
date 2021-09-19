@@ -4,7 +4,7 @@
  * @vulnerable_at_lines: 15
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract GuessTheRandomNumberChallenge {
     uint8 answer;

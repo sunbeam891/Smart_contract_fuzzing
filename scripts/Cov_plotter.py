@@ -1,4 +1,4 @@
-#PLotter_V0.8 _ Added error management for files not present
+#PLotter_V0.10 _ Added clause to ignore instruction coverage if fuzzer = sFuzz and branch coverage if fuzzer == ILF
 # Usage: python3 Cov_plotter.py <Contract file name> <Contract Name> <Saving folder> <original file location> <Results_folder> <ID>  <vuln file location> <Fuzzer>
 import json
 import os
@@ -8,6 +8,7 @@ import sys
 from openpyxl import load_workbook
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt_1
 import numpy as np
 
 
@@ -22,15 +23,14 @@ Fuzzer = sys.argv [8]
 #PLotting graph for coverage vs time
 File = saving_folder+"cov_per_time.json"
 
-if os.path.isfile(File) == True and not os.stat(File).st_size == 0 :
+
+#Instruction_Coverage
+if os.path.isfile(File) == True and not os.stat(File).st_size == 0 and not Fuzzer == "sFuzz":
     with open(File, 'r',encoding="utf-8") as f:
         vuln_json = json.load(f)
     cov_time = pd.DataFrame(columns=('Cov','time'))
     for i,dictionary in enumerate(vuln_json):
-        if Fuzzer == "sFuzz":
-            coverage = dictionary["Branch_Coverage"].split(" ")[0]
-        else:
-            coverage = dictionary["Code_Coverage"].split(" ")[0]
+        coverage = dictionary["Code_Coverage"].split(" ")[0]
         if "sec" in dictionary["Time_Taken"]:
             time = float(dictionary["Time_Taken"].split(" ")[0])
         else:
@@ -39,8 +39,28 @@ if os.path.isfile(File) == True and not os.stat(File).st_size == 0 :
     plt.plot(cov_time["time"],cov_time["Cov"],marker="o")
     #for i,j in zip(cov_time["time"],cov_time["Cov"]):
         #plt.annotate(str(j), xy=(i, j), xytext=(0,5),textcoords='offset points')
-    plt.savefig(saving_folder+"plot.png")
+    plt.savefig(saving_folder+"plot_instruction.png")
+    plt.clf()
 
+    
+    
+    
+#Branch_Coverage    
+if os.path.isfile(File) == True and not os.stat(File).st_size == 0 and not Fuzzer=="ILF":
+    with open(File, 'r',encoding="utf-8") as f:
+        vuln_json = json.load(f)
+    cov_time = pd.DataFrame(columns=('Cov','time'))
+    for z,dictionary_br in enumerate(vuln_json):
+        coverage = dictionary_br["Branch_Coverage"].split(" ")[0]
+        if "sec" in dictionary_br["Time_Taken"]:
+            time = float(dictionary_br["Time_Taken"].split(" ")[0])
+        else:
+            time = float(dictionary_br["Time_Taken"])
+        cov_time.loc[len(cov_time)]=[float(coverage.replace("%","")),time]    
+    plt.plot(cov_time["time"],cov_time["Cov"],marker="o")
+    #for i,j in zip(cov_time["time"],cov_time["Cov"]):
+        #plt.annotate(str(j), xy=(i, j), xytext=(0,5),textcoords='offset points')
+    plt.savefig(saving_folder+"plot_Branch.png")    
     
     
 #Storing time for trigger in excel sheet

@@ -14,7 +14,7 @@
 * Ideally tools should output the correct transaction trace.
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract ReturnMemory {
     mapping(bytes32=>address) public slates;

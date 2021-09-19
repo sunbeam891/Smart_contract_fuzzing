@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /**
  * @title MultiSigStub  
@@ -247,7 +247,7 @@ contract MultiSigFactory {
 // MultiSigTokenWallet as in 0xc0FFeEE61948d8993864a73a099c0E38D887d3F4
 ///////////////////////////////////////////////////////////////////
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract ERC20 {
     uint256 public totalSupply;

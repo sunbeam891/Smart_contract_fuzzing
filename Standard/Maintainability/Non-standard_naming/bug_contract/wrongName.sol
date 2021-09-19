@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 //Solidity specifies the standard naming style, which makes the source code easier to understand. Try naming using the standard naming style.
 

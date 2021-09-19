@@ -4,7 +4,7 @@
  * @vulnerable_at_lines: 39
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract FreeEth
 {

@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 /// @author developers //NB!
 /// @notice <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f784828787988583b7939281929b9887928584">[email&#160;protected]</a> //NB!

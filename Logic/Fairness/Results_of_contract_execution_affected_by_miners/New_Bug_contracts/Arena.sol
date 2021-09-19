@@ -1,6 +1,6 @@
 //Gladiate
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 library gladiate {
     enum Weapon {None, Knife, Sword, Spear}

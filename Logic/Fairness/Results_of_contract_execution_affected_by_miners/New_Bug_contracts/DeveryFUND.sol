@@ -1,6 +1,6 @@
 // Author : shift
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 // ERC20 Interface: https://github.com/ethereum/EIPs/issues/20
 contract ERC20 {

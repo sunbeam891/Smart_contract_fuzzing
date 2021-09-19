@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 contract SoapBox {
 // Our &#39;dict&#39; of addresses that are approved to share opinions
     mapping (address => bool) approvedSoapboxer;

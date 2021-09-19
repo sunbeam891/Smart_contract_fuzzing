@@ -1,4 +1,4 @@
-#Script_Main_excel_creater0.10 added directory for storing output
+#Script_Main_excel_creater0.11 Fixed Confuzzius vuln detection and added original vuln
 import json
 import os
 import sys
@@ -41,13 +41,12 @@ for i in vuln_json["Vulnerabilities_detected"]:
 
 print(Vulnerability_detected)
 print(vuln_json["Vulnerabilities_detected"])
-print(vuln_json["Vulnerabilities_detected"])
+
 if fuzzer == "Confuzzius":
-    Dict_vuln = dict({"Block" : "Block dependency detected", "Arbitrary": "Arbitrary memory access detected", "Assertion":"Assertion failure detected", "Overflow":"Integer overflow detected", "Underflow":"Integer underflow detected", "Reentrancy":"Reentrancy detected","Transaction":"Transaction order dependency detected","Unhandled":"Unhandled exception detected","Delegate":"Unsafe delegatecall detected","Leaking":"Leaking ether detected","Locking":"Locking ether detected","Self":"Unprotected selfdestruct detected"})
+    Dict_vuln = dict({"BlockStateDep" : "Block dependency detected", "Arbitrary": "Arbitrary memory access detected", "Assertion":"Assertion failure detected", "Overflow":"Integer overflow detected", "Underflow":"Integer underflow detected", "Reentrancy":"Reentrancy detected","Transaction":"Transaction order dependency detected","UnhandledException":"Unhandled exception detected","DangerousDelegatecall":"Unsafe delegatecall detected","Leaking":"Leaking ether detected","Locking":"Locking ether detected","Suicidal":"Unprotected selfdestruct detected"})
 elif fuzzer =="ILF":
     Dict_vuln = dict({"BlockStateDep": "Block dependency detected","DangerousDelegatecall" :"Unsafe delegatecall detected" , "Leaking": "Leaking ether detected" , "Locking": "Locking ether detected", "Suicidal": "Unprotected selfdestruct detected","UnhandledException": "Unhandled exception detected" , "Reentrancy" : "Reentrancy detected" })
 elif fuzzer =="sFuzz":
-    print("hell")
     Dict_vuln = dict({"gasless":"gasless send detected","Overflow":"Integer overflow/ Underflow detected","BlockStateDep": "timestamp dependency/block number dependency","DangerousDelegatecall" :"Unsafe delegatecall detected"  , "Locking": "freezing ether detected","UnhandledException": "exception disorder detected" , "Reentrancy" : "Reentrancy detected" })
 for key, value in Dict_vuln.items():
     if key in vuln_json["Vulnerabilities_detected"] and key != vulnerability:
@@ -60,17 +59,15 @@ File_path= "coverage_json.json"
 with open(File_path, 'r',encoding="utf-8") as f:
     json_data = json.load(f)
 
-print(filename)
-print(Contractname)
-
 json_data["Contract_File_name"] = filename
 json_data["Contract_Name"] = Contractname
 #Vulnerabilities_detected = ",".join(vuln_json["Vulnerabilities_detected"])
 Vulnerabilities_detected = ",".join(updated_vuln_detected)
 json_data["Vulnerability_detected"] = Vulnerability_detected
 json_data["Vulnerabilities_detected"] = Vulnerabilities_detected
+json_data["Vulnerability_original"]= vulnerability
 
-column_names= ["Contract_File_name","Contract_Name","Code_Coverage","Branch_Coverage","Vulnerability_detected","Vulnerabilities_detected", "No._of_Transactions","Time_Taken","Time_trigger"]
+column_names= ["Contract_File_name","Contract_Name","Code_Coverage","Branch_Coverage","Vulnerability_original","Vulnerability_detected","Vulnerabilities_detected", "No._of_Transactions","Time_Taken","Time_trigger"]
 dataframe=pd.DataFrame(columns=column_names)
 data = [json_data]
 dataframe = dataframe.append(data,ignore_index=True,sort=False)
@@ -128,5 +125,4 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
     writer.save()
 
 Filee=root+"dataset/"+fuzzer+"-"+ID+"-output.xlsx"
-print(Filee)
 append_df_to_excel(Filee,dataframe,header=None,index=False)

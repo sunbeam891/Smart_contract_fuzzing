@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 /*
       No more panic sells.
       Force yourself to hodl them eths with HodlBox!

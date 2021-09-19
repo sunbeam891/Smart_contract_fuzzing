@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 // Simple Game. Each time you send more than the current jackpot, you become
 // owner of the contract. As an owner, you can take the jackpot after a delay

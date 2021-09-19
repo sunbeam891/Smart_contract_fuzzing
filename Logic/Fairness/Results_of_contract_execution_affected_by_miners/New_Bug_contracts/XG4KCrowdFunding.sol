@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 contract XG4KCrowdFunding {
     // data structure to hold information about campaign contributors
     struct Funder {

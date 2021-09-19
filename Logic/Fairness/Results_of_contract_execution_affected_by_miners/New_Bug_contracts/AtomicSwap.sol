@@ -2,7 +2,7 @@
  *Submitted for verification at Etherscan.io on 2018-03-03
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract ERC20Basic {
   function totalSupply() public view returns (uint256);

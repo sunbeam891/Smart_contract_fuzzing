@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 //https://github.com/OpenZeppelin/zeppelin-solIdity/blob/master/contracts/math/SafeMath.sol
 library SafeMath {

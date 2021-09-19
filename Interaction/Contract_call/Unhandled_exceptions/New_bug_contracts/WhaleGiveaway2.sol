@@ -4,7 +4,7 @@
  * @vulnerable_at_lines: 45
  */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract WhaleGiveaway2
 {

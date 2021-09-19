@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 contract MiCon{
     string public name="qwe";
     string public symbol= "hsee";

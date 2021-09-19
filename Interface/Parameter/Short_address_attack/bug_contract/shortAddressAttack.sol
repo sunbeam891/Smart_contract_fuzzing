@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 //based https://github.com/denismp/smart-contract-short-address-attack/blob/master/MyToken.sol
 

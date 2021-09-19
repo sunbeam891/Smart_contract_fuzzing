@@ -2,7 +2,7 @@
  *Submitted for verification at Etherscan.io on 2017-08-06
 */
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 library SafeMath {
   function sub(uint a, uint b) internal returns (uint) {

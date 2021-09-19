@@ -1,6 +1,6 @@
 // taken from https://www.ethereum.org/token#the-coin (4/9/2018)
 
-pragma solidity 0.4.26;
+pragma solidity ^0.4.2;
 
 contract owned {
     address public owner;
