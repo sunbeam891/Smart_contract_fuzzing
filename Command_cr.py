@@ -1,4 +1,4 @@
-#script0.23___ Correcting contract not read mistake + sFuzz timeout
+#script0.25___ edit ILF and confuzzius commands for time
 
 # Format: python3 test.py <Fuzzer> <datasetlocation> <rootdirectoryforrunningfuzzer (/root/)> <ID> <SAVETO FOLDER>
 import os
@@ -55,8 +55,8 @@ if fuzzer == "Confuzzius":
                             saving_folder = saving_folder_or +str(k)
                         
                 
-                    Confuzzius_bash_run= "python3 fuzzer/main.py -s " + os.path.join(root, file) +" -c "+ con_name+ " --solc v0.4.26 --evm byzantium -t 10"
-                    Data_retriever = "python3 "+script_loc+"excel_maker.py " + file+ " " + con_name + " " + os.path.join(root, "vuln.txt") + " " + fuzzer + " "+ID+" "+rootdirectory
+                    Confuzzius_bash_run= "python3 fuzzer/main.py -s " + os.path.join(root, file) +" -c "+ con_name+ " --solc v0.4.26 --evm byzantium -t 120"
+                    Data_retriever = "python3 "+script_loc+"excel_maker.py " + file+ " " + con_name + " " + os.path.join(root, "vuln.txt") + " " + fuzzer + " "+ID+" "+rootdirectory + " "+os.path.join(root, file)
                     Plotter_cov = "python3 "+script_loc+"Cov_plotter.py "+ file + " "+con_name+" "+ saving_folder+" " + os.path.join(root, file) + " " +datasetloc+"/"+Saveto+"_"+ID+ " "+ ID +" "+ os.path.join(root, "vuln.txt")+ " "+fuzzer  
                     #print (Confuzzius_bash_run)
                     commands.write ("echo '"+"File name = "+file  + " Contract Name = " +con_name+ "'\n")
@@ -111,9 +111,9 @@ elif fuzzer == "ILF":
                         else:
                             saving_folder = saving_folder_or +str(k)
 
-                    ILF_bash_run= "python3 -m ilf --proj ." + "/example/crowdsale" +" --contract "+ con_name+ " --fuzzer imitation --model ./model/ --limit 2000"
+                    ILF_bash_run= "timeout 130 python3 -m ilf --proj ." + "/example/crowdsale" +" --contract "+ con_name+ " --fuzzer imitation --model ./model/ --limit 2000 --timer 120"
                     Truffle_maker= "python3 "+script_loc+"Truffle_maker.py "+ con_name + " "+ file
-                    Data_retriever = "python3 "+script_loc+"excel_maker.py " + file+ " " + con_name + " " + os.path.join(root, "vuln.txt")+ " " + fuzzer + " "+ ID + " "+rootdirectory
+                    Data_retriever = "python3 "+script_loc+"excel_maker.py " + file+ " " + con_name + " " + os.path.join(root, "vuln.txt")+ " " + fuzzer + " "+ ID + " "+rootdirectory+ " "+os.path.join(root, file)
                     Plotter_cov = "python3 "+script_loc+"Cov_plotter.py "+ file + " "+con_name+" "+ saving_folder+" " + os.path.join(root, file) + " " +datasetloc+"/"+Saveto+"_"+ID+ " "+ ID +" "+ os.path.join(root, "vuln.txt") + " "+fuzzer 
                     commands.write ("echo "+"File name = "+file  + " Contract Name = " +con_name+ "\n")
                     commands.write ("echo python3 Test.py "+ con_name + " "+ file+ "\n")
@@ -174,7 +174,7 @@ elif fuzzer == "sFuzz":
                     sFuzz_bash_run= "./fuzzer -g -r 1 -d 120 && chmod +x fuzzMe && timeout 125 ./fuzzMe"
                     sFuzz_file_maker = "python3 "+script_loc+"sfuzz_file.py " + file + " " + con_name + " " + "contracts " + datasetloc
                     sFuzz_data_retriever = "python3 "+script_loc+"sfuzz_data_retr.py " +  con_name + ".sol"+" " + con_name + " " + "contracts/"
-                    Data_retriever = "python3 "+ script_loc+"excel_maker.py " + file+ " " + con_name + " " + os.path.join(root, "vuln.txt")+ " " + fuzzer + " "+ID + " "+rootdirectory
+                    Data_retriever = "python3 "+ script_loc+"excel_maker.py " + file+ " " + con_name + " " + os.path.join(root, "vuln.txt")+ " " + fuzzer + " "+ID + " "+rootdirectory+ " "+os.path.join(root, file)
                     sFuzz_per_time = "python3 "+script_loc+"sfuzz_per_time_retr.py "+ file + " "+ con_name + " "+ rootdirectory+"contracts"
                     Plotter_cov = "python3 "+script_loc+"Cov_plotter.py "+ file + " "+con_name+" "+ saving_folder+" " + os.path.join(root, file) + " " +datasetloc+"/"+Saveto+"_"+ID+ " "+ ID +" "+ os.path.join(root, "vuln.txt") + " "+fuzzer 
                     commands.write ("echo "+"File name = "+file  + " Contract Name = " +con_name+ "\n")
