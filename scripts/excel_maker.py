@@ -1,4 +1,4 @@
-#Script_Main_excel_creater0.11 Fixed Confuzzius vuln detection and added original vuln
+#Script_Main_excel_creater0.12 Added code to check and add original vuln class to excel
 import json
 import os
 import sys
@@ -12,6 +12,7 @@ Contractname = sys.argv[2]
 fuzzer = sys.argv[4]
 ID = sys.argv[5]
 root = sys.argv[6]
+vulnfi = sys.argv[7]
 Vulnerability_detected = "No"
 vulnerability = ""
 updated_vuln_detected = []
@@ -54,6 +55,29 @@ for key, value in Dict_vuln.items():
 
 
 
+#Check vuln class
+vulns_class= ["Data","Description","Environment","Interaction","Interface","Logic","Performance","Security","Standard"]
+class_vuln = ""
+counter = 0
+if  fuzzer== "ILF":
+    counter = 5
+elif fuzzer == "Confuzzius":
+    counter = 3
+else:
+    counter = 6
+
+
+for vulnclass in vulns_class:
+    if vulnclass == vulnfi.split("/")[counter]:
+        class_vuln = vulnclass
+        
+        
+        
+        
+        
+        
+        
+        
 File_path= "coverage_json.json"
 
 with open(File_path, 'r',encoding="utf-8") as f:
@@ -66,8 +90,9 @@ Vulnerabilities_detected = ",".join(updated_vuln_detected)
 json_data["Vulnerability_detected"] = Vulnerability_detected
 json_data["Vulnerabilities_detected"] = Vulnerabilities_detected
 json_data["Vulnerability_original"]= vulnerability
+json_data["Vuln_class"]=class_vuln
 
-column_names= ["Contract_File_name","Contract_Name","Code_Coverage","Branch_Coverage","Vulnerability_original","Vulnerability_detected","Vulnerabilities_detected", "No._of_Transactions","Time_Taken","Time_trigger"]
+column_names= ["Contract_File_name","Contract_Name","Code_Coverage","Branch_Coverage","Vulnerability_original","Vuln_class","Vulnerability_detected","Vulnerabilities_detected", "No._of_Transactions","Time_Taken","Time_trigger"]
 dataframe=pd.DataFrame(columns=column_names)
 data = [json_data]
 dataframe = dataframe.append(data,ignore_index=True,sort=False)

@@ -1,4 +1,4 @@
-#PLotter_V0.10 _ Added clause to ignore instruction coverage if fuzzer = sFuzz and branch coverage if fuzzer == ILF
+#PLotter_V0.11 _ Added original_file_loc to top
 # Usage: python3 Cov_plotter.py <Contract file name> <Contract Name> <Saving folder> <original file location> <Results_folder> <ID>  <vuln file location> <Fuzzer>
 import json
 import os
@@ -20,6 +20,27 @@ results_folder =sys.argv[5]
 ID = sys.argv[6]
 vuln_file =  sys.argv [7]
 Fuzzer = sys.argv [8]
+
+
+
+
+#Creating json file with contract's original information
+
+original_info = {}
+original_info["File_name"] = contract_file
+original_info["Contract_name"] = contract_name
+original_info["Contract_location"] = file_loc_orig
+original_info["vuln_file_location"] = vuln_file
+    
+    
+Original_json_loc = saving_folder + "Original_info.json" 
+
+with open(Original_json_loc, 'w', encoding="utf-8") as file:
+        x = json.dumps(original_info, indent=4)
+        file.write(x + '\n') 
+
+
+
 #PLotting graph for coverage vs time
 File = saving_folder+"cov_per_time.json"
 
@@ -174,20 +195,7 @@ elif os.path.isfile(File) == False or os.stat(File).st_size == 0:
     
     
     
-#Creating json file with contract's original information
-
-original_info = {}
-original_info["File_name"] = contract_file
-original_info["Contract_name"] = contract_name
-original_info["Contract_location"] = file_loc_orig
-original_info["vuln_file_location"] = vuln_file
-    
-    
-Original_json_loc = saving_folder + "Original_info.json" 
-
-with open(Original_json_loc, 'w', encoding="utf-8") as file:
-        x = json.dumps(original_info, indent=4)
-        file.write(x + '\n')    
+   
     
     
     

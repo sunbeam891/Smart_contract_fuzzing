@@ -1,4 +1,4 @@
-#Script_sFuzz_data_retriever_v0.14
+#Script_sFuzz_data_retriever_v0.15 Fixed cov_per_time wrong function name
 #format = python3 sfuzz_per_time_retr.py <filename> <contractname> <contracts_folder>
 import json
 import os

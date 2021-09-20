@@ -15,13 +15,13 @@ fi
 if [[ $FUZZER == "Confuzzius" ]] || [[ $FUZZER == "all" ]]
 then 
     chmod +x common_file.sh
-    ./common_file.sh saddie/confuzzius:script_edit_2 $TARGET $FUZZER results-Confuzzius $RUNS /root/
+    ./common_file.sh saddie/confuzzius:script_edit_6 $TARGET $FUZZER results-Confuzzius $RUNS /root/
 fi
 #### ILF ####
 if [[ $FUZZER == "ILF" ]] || [[ $FUZZER == "all" ]]
 then 
     chmod +x common_file.sh
-    ./common_file.sh saddie/ILF:script_edit_2 $TARGET $FUZZER results-ILF $RUNS /go/src/ilf/
+    ./common_file.sh saddie/ilf:script_edit_6 $TARGET $FUZZER results-ILF $RUNS /go/src/ilf/
 fi
 
 
@@ -29,6 +29,6 @@ fi
 if [[ $FUZZER == "sFuzz" ]] || [[ $FUZZER == "all" ]]
 then 
     chmod +x common_file.sh
-    ./common_file.sh saddie/sFuzz:script_edit_2 $TARGET $FUZZER results-sFuzz $RUNS /home/sFuzz/
+    ./common_file.sh saddie/sfuzz:script_edit_5 $TARGET $FUZZER results-sFuzz $RUNS /home/sFuzz/build/fuzzer/
 fi
 
