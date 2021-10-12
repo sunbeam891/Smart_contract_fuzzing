@@ -1,4 +1,4 @@
-#Result_present.py V0.12, final file with ouuputs saved
+#Result_present.py V0.13, fixed errors
 #Format = python3 Result_present.py <output_files> <output_folders> <Target dataset>
 import os
 import sys
@@ -187,9 +187,7 @@ for i in fuzzer_names:
     Performance_metrics[i]["Not_able"] = no_able_run
     Performance_metrics[i]["Recall"] = (no_true_pos)/(no_true_pos+no_false_neg)
 
-with open(arg3+"/Final_results/Overall_performance.json", 'w', encoding="utf-8") as file:
-    x = json.dumps(Performance_metrics, indent=4)
-    file.write(x + '\n')    
+  
 
     #Plot bar graph for average code coverage
     
