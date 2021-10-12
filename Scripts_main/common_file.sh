@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+
 DOCIMAGE=$1   #name of the docker image
 TARGET=$2
 FUZZER=$3 
@@ -8,11 +8,15 @@ RUNS=$5
 ROOT=$6
 #keep all container ids
 cids=()
-
+excelnames='Start'
+outputnames='Start'
 #create one container for each run
 for i in $(seq 1 $RUNS); do
-  id=$(docker run --cpus=1 -v ${TARGET}:${ROOT}dataset -it --entrypoint='' $DOCIMAGE /bin/bash -c "cd ${ROOT}dataset && chmod +x fuzzer_run.sh && ./fuzzer_run.sh ${FUZZER} ${ROOT}dataset ${ROOT} ${i} ${SAVETO}") # i used for determining container number for output file name
+  id=$(docker run --cpus=1 -v ${TARGET}:${ROOT}dataset -d -it --entrypoint='' $DOCIMAGE /bin/bash -c "cd ${ROOT}dataset/Scripts_main && chmod +x fuzzer_run.sh && ./fuzzer_run.sh ${FUZZER} ${ROOT}dataset ${ROOT} ${i} ${SAVETO}") # i used for determining container number for output file name 
   cids+=(${id::12}) #store only the first 12 characters of a container ID
+  excelnames+=',${FUZZER}-${i}-output'
+  outputnames+=',${SAVETO}_${i}'
+
 done
 
 dlist="" #docker list
@@ -27,6 +31,12 @@ docker wait ${dlist} > /dev/null
 wait
 
 #collect the fuzzing results from the containers
+printf "Collecting results and performing necessary operations ..... "
+mkdir ${TARGET}/Final_results/
+rid=$(python3 ${TARGET}/Scripts_main/Result_present.py ${excelnames} ${outputnames} ${TARGET})
+wait $rid
+
+
 printf "\n${FUZZER^^}: Collected results and saved them to ${SAVETO}"
 
 

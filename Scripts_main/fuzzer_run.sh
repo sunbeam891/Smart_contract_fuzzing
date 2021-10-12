@@ -7,6 +7,6 @@ SAVETO=$5
 
 python3 Command_cr.py ${FUZZER} ${DATASET} ${ROOT} ${ID} ${SAVETO}
 
-chmod +x ${FUZZER}_commands${ID}.sh
+chmod +x ${DATASET}/${FUZZER}_commands${ID}.sh
 
-./${FUZZER}_commands${ID}.sh    
+./${DATASET}/${FUZZER}_commands${ID}.sh    
