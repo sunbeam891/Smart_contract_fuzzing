@@ -223,6 +223,9 @@ plt.savefig(arg3+"/Final_results/Average_bran_cov.png")
 plt.show()
 plt.close()
 
+with open(arg3+"/Final_results/Overall_performance.json", 'w', encoding="utf-8") as file:
+    x = json.dumps(Performance_metrics, indent=4)
+    file.write(x + '\n')  
 
 
 
@@ -292,7 +295,7 @@ for i in fuzzer_names:
                         Average_class_type["time_taken"][i][classes]=((float(Average_class_type["time_taken"][i][classes])*(Class_times[classes]))+float(Averaged_fuzzer[i][9][row]))/(Class_times[classes]+1)
                                 
                         #Unique bugs
-                        for l,vulns in enumerate (Averaged_fuzzer[i][10][row].split(",")):
+                        for l,vulns in enumerate (Averaged_fuzzer[i][11][row].split(",")):
                             if not vulns== "":
                                 Metrics_class_type["Unique_bugs"][i][classes]= Metrics_class_type["Unique_bugs"][i][classes]+1
                         #True Pos
