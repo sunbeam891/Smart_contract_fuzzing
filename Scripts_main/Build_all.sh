@@ -9,10 +9,10 @@ cd Scripts_main
 
 sudo chmod +x Requirements_install.sh
 
-sudo ./requirements_install.sh
+sudo ./Requirements_install.sh
 
 sudo docker pull saddie/confuzzius:script_edit_6
 
 sudo docker pull saddie/ilf:script_edit_6
 
-sudo docker pull saddie/sFuzz:script_edit_5
+sudo docker pull saddie/sfuzz:script_edit_5
