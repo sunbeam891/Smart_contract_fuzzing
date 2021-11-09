@@ -21,7 +21,7 @@ fi
 if [[ $FUZZER == "ILF" ]] 
 then 
     chmod +x common_file.sh
-    ./common_file.sh saddie/ILF:script_edit_6 $TARGET $FUZZER results-ILF $RUNS /go/src/ilf/
+    ./common_file.sh saddie/ilf:script_edit_6 $TARGET $FUZZER results-ILF $RUNS /go/src/ilf/
 fi
 
 
@@ -29,7 +29,7 @@ fi
 if [[ $FUZZER == "sFuzz" ]] 
 then 
     chmod +x common_file.sh
-    ./common_file.sh saddie/sFuzz:script_edit_5 $TARGET $FUZZER results-sFuzz $RUNS /home/sFuzz/
+    ./common_file.sh saddie/sfuzz:script_edit_5 $TARGET $FUZZER results-sFuzz $RUNS /home/sFuzz/
 fi
 
 
