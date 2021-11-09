@@ -13,13 +13,13 @@ fi
 
 #### Confuzzius ####
 if [[ $FUZZER == "Confuzzius" ]] 
-then 
+then
     chmod +x common_file.sh
     sudo ./common_file.sh saddie/confuzzius:script_edit_6 $TARGET $FUZZER results-Confuzzius $RUNS /root/
 fi
 #### ILF ####
 if [[ $FUZZER == "ILF" ]] 
-then 
+then
     chmod +x common_file.sh
     sudo ./common_file.sh saddie/ilf:script_edit_6 $TARGET $FUZZER results-ILF $RUNS /go/src/ilf/
 fi
@@ -27,7 +27,7 @@ fi
 
 #### sFuzz ####
 if [[ $FUZZER == "sFuzz" ]] 
-then 
+then
     chmod +x common_file.sh
     sudo ./common_file.sh saddie/sfuzz:script_edit_5 $TARGET $FUZZER results-sFuzz $RUNS /home/sFuzz/
 fi
