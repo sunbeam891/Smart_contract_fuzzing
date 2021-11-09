@@ -34,7 +34,7 @@ fi
 
 
 #### all ####
-if [[ $Fuzzer == "all"]] 
+if [[ $Fuzzer == "all" ]] 
 then
     chmod +x common_file.sh
     sudo ./common_file.sh all $TARGET $FUZZER results $RUNS roots
