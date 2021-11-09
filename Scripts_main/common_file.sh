@@ -25,7 +25,7 @@ fi
 if [[ $FUZZER == "all" ]]
 then 
   for i in $(seq 1 $RUNS); do
-    id=$(docker run --cpus=1 -v ${TARGET}:/home/sFuzz/dataset -d -it --entrypoint='' saddie/sFuzz:script_edit_5 /bin/bash -c "cd /home/sFuzz/dataset/Scripts_main && chmod +x fuzzer_run.sh && ./fuzzer_run.sh sFuzz /home/sFuzz/dataset /home/sFuzz/ ${i} results-sFuzz") # i used for determining container number for output file name 
+    id=$(docker run --cpus=1 -v ${TARGET}:/home/sFuzz/dataset -d -it --entrypoint='' saddie/sfuzz:script_edit_5 /bin/bash -c "cd /home/sFuzz/dataset/Scripts_main && chmod +x fuzzer_run.sh && ./fuzzer_run.sh sFuzz /home/sFuzz/dataset /home/sFuzz/ ${i} results-sFuzz") # i used for determining container number for output file name 
     cids+=(${id::12}) #store only the first 12 characters of a container ID
     excelnames+=,sFuzz-${i}-output
     outputnames+=,results-sFuzz_${i}
@@ -35,7 +35,7 @@ fi
 if [[ $FUZZER == "all" ]]
 then 
   for i in $(seq 1 $RUNS); do
-    id=$(docker run --cpus=1 -v ${TARGET}:/go/src/ilf/dataset -d -it --entrypoint='' saddie/ILF:script_edit_6 /bin/bash -c "cd /go/src/ilf/dataset/Scripts_main && chmod +x fuzzer_run.sh && ./fuzzer_run.sh ILF /go/src/ilf/dataset /go/src/ilf/ ${i} results-ILF") # i used for determining container number for output file name 
+    id=$(docker run --cpus=1 -v ${TARGET}:/go/src/ilf/dataset -d -it --entrypoint='' saddie/ilf:script_edit_6 /bin/bash -c "cd /go/src/ilf/dataset/Scripts_main && chmod +x fuzzer_run.sh && ./fuzzer_run.sh ILF /go/src/ilf/dataset /go/src/ilf/ ${i} results-ILF") # i used for determining container number for output file name 
     cids+=(${id::12}) #store only the first 12 characters of a container ID
     excelnames+=,ILF-${i}-output
     outputnames+=,results-ILF_${i}
