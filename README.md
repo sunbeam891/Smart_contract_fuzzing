@@ -8,6 +8,27 @@
 2. Linux/Ubuntu has been used for testing
 3. Docker image containes required solc and python versions.
 
+
+## Folder structure
+```
+Smart_contract_fuzzing
+├── Data: This folder contains smart contracts that have vulnerability related to this category.
+├── Description: This folder contains smart contracts that have vulnerability related to this category.
+├── Environment: This folder contains smart contracts that have vulnerability related to this category.
+├── Interaction: This folder contains smart contracts that have vulnerability related to this category.
+├── Interface: This folder contains smart contracts that have vulnerability related to this category.
+├── Logic: This folder contains smart contracts that have vulnerability related to this category.
+├── Performance: This folder contains smart contracts that have vulnerability related to this category.
+├── Security: This folder contains smart contracts that have vulnerability related to this category.
+├── Standard: This folder contains smart contracts that have vulnerability related to this category.
+├── scripts: this folder contains all scripts to run experiments, collect & store results for each fuzzer
+├── Scripts_main: this folder contains scripts to build the framework, install requirements and spawn containers to run the fuzzers.
+├── All_combined_1.xlsx: this file contains names of contracts and their solidity files in the dataset provided.
+├── All_combined_1_1.xlsx: This file acts as a backup for All_combined_1.xlsx
+├── Command_cr.py: This python script creates automation commands for all the fuzzers in this framework.
+└── README.md
+```
+
 ## Installation and setup (Currently only Cofuzzius is runnable on the entire dataset) (Linux)
 
 ### Step 0. (Cloning repository)
