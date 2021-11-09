@@ -11,6 +11,7 @@
 
 ## Folder structure
 ```
+Note: Within each category folder, further classification of bugs have been done. 
 Smart_contract_fuzzing
 ├── Data: This folder contains smart contracts that have vulnerability related to this category.
 ├── Description: This folder contains smart contracts that have vulnerability related to this category.
