@@ -209,7 +209,7 @@ plt.bar(fuzzer_ins_plot,fuzzer_avg_inst_cov,color=["r","b"])
 for i in range(len(fuzzer_avg_inst_cov)):
     plt.annotate("{:.2f}".format(float(fuzzer_avg_inst_cov[i])), xy=(fuzzer_ins_plot[i],fuzzer_avg_inst_cov[i]), ha='center', va='bottom')
 plt.savefig(arg3+"/Final_results/Average_inst_cov.png")    
-
+plt.close()
 
 #Plot bar graph for average branch coverage 
 plt.subplot(1,2,2)
