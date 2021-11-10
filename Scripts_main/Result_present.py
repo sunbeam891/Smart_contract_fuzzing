@@ -13,8 +13,8 @@ arg1 = sys.argv[1]
 arg2 = sys.argv[2]
 arg3 = sys.argv[3]
 all_combined = arg3+"All_combined_1.xlsx"
-excel_files = arg1[0].split(',')[1:]
-output_folders= arg2[0].split(',')[1:]
+excel_files = arg1.split(',')[1:]
+output_folders= arg2.split(',')[1:]
 
 frame_name =""
 
