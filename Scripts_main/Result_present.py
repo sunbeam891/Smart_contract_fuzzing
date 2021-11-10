@@ -29,7 +29,7 @@ Averaged_fuzzer={}
 
 
 fuzzer_names = list(dict.fromkeys(fuzzer_names))
-print(fuzzer_names)
+#print(fuzzer_names)
 No_fuzzer_done = 0
 
 for i in fuzzer_names:
@@ -106,7 +106,7 @@ for i in fuzzer_names:
                     Averaged_fuzzer[i][2][j]=(((main_df_ins)*No_fuzzer_done)+mean_df_ins)/(No_fuzzer_done+1)
                     Averaged_fuzzer[i][3][j]=(((main_df_br)*No_fuzzer_done)+mean_df_br)/(No_fuzzer_done+1)
                     Averaged_fuzzer[i][9][j]=(((main_df_time)*No_fuzzer_done)+mean_df_time)/(No_fuzzer_done+1)
-                    print(Averaged_fuzzer[i][3][j])
+                    #print(Averaged_fuzzer[i][3][j])
                     
                     
                     #Unique Vulnerabilities
@@ -275,7 +275,7 @@ for i in fuzzer_names:
     Done_folders = [] 
     done_locs = []
     done_rows =[]
-    print(Class_times)
+    #print(Class_times)
     Class_times={"Data":0,"Description":0,"Environment":0,"Interaction":0,"Interface":0,"Logic":0,"Performance":0,"Security":0,"Standard":0}
     if not i in done_fuzzers:
         done_fuzzers.append(i)
@@ -314,7 +314,7 @@ for i in fuzzer_names:
         
         for class_re in vulns_class:
             Metrics_class_type["Recall"][i][class_re] = (Metrics_class_type["True_pos"][i][class_re])/(Metrics_class_type["True_pos"][i][class_re]+Metrics_class_type["False_neg"][i][class_re])
-            print(Metrics_class_type["Recall"][i][class_re])
+            #print(Metrics_class_type["Recall"][i][class_re])
                             
 #Identify total contracts in each class and each category of metrics
 
